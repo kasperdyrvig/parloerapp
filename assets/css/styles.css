@@ -1,0 +1,107 @@
+:root {
+    --color-yellow-100: #F9F6CD;
+    --color-yellow-300: #F2EB8C;
+    --color-yellow-500: #ECDC00;
+    --color-yellow-700: #D8CB18;
+    --color-yellow-900: #9C9311;
+    --color-green-100: #CDF2CA;
+    --color-green-300: #9AE495;
+    --color-green-500: #3CC932;
+    --color-green-700: #45A23F;
+    --color-green-900: #2B6D26;
+    --color-red-100: #F0CCCF;
+    --color-red-300: #F5949D;
+    --color-red-500: #F35060;
+    --color-red-700: #AB3B46;
+    --color-red-900: #622D32;
+    --color-blue-100: #D7DAEF;
+    --color-blue-300: #8691D0;
+    --color-blue-500: #4A5BB9;
+    --color-blue-700: #38458F;
+    --color-blue-900: #1E1E5D;
+    --color-purple-100: #E4E0F0;
+    --color-purple-300: #C2BBD8;
+    --color-purple-500: #9C8FC7;
+    --color-purple-700: #7260AF;
+    --color-purple-900: #4F427B;
+    --color-gray-100: #E5EAF5;
+    --color-gray-300: #A8B0C9;
+    --color-gray-500: #8F98B3;
+    --color-gray-700: #5F6A8C;
+    --color-gray-900: #3E455B;
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    --spacing-4x-large: 5rem;
+    --spacing-3x-large: 4rem;
+    --spacing-2x-large: 3rem;
+    --spacing-x-large: 2.25rem;
+    --spacing-large: 1.5rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.75rem;
+    --spacing-x-small: 0.5rem;
+    --spacing-2x-small: 0.25rem;
+
+    --size-2x-large: 1.75rem;
+    --size-x-large: 1.5rem;
+    --size-large: 1.125rem;
+    --size-medium: 1rem;
+    --size-small: 0.875rem;
+    --size-x-small: 0.75rem;
+
+    --text-bold: 700;
+    --text-semibold: 600;
+    --text-normal: 500;
+    --text-light: 400;
+
+    --rounded-sm: 0.25rem;
+    --rounded: 0.5rem;
+
+    --letter-spacing-tight: -0.05em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+
+    --base-font-size: var(--size-medium);
+    --border-radius: 4px;
+    --border-radius-large: 10px;
+    --font-color: var(--color-blue-900);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+    font-size: var(--base-font-size);
+    color: var(--font-color);
+}
+
+nav.main-navigation {
+    position: fixed;
+    inset: auto 0 0 0;
+    border-top: 1px solid var(--color-gray-300);
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav.main-navigation > a {
+    color: var(--color-gray-700);
+    text-decoration: none;
+}
+
+nav.main-navigation > a.current {
+    color: var(--color-black);
+}

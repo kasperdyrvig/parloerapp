@@ -1,0 +1,12 @@
+- name: Hjem
+  link: /
+  icon: house
+- name: Parlør
+  link: /parloer
+  icon: comments
+- name: Kursus
+  link: /kursus
+  icon: hat
+- name: Mere
+  link: /mere
+  icon: ellipsis
