@@ -1,2 +1,8 @@
 baseurl: "parloerapp"
 url: "https://kasperdyrvig.github.io"
+
+collections:
+  grupper:
+    output: true
+  parloer:
+    output: true
