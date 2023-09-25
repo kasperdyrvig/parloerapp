@@ -3,12 +3,12 @@ layout: default
 metaTitle: Farver
 onPageTitle: Farver
 parentGroup: basic
+currentGroup: color
 ---
 
-<ul>
-{% for word in site.data.basic.colors.words %}
-  <li>
-      {{ word.greenlandic }}
-  </li>
+<div>
+{% assign entries = site.dictionary | where: 'category', page.currentGroup %}
+{% for entry in entries %}
+  {% include parloerentry.html kl=entry.greenlandic da=entry.danish %}
 {% endfor %}
-</ul>
+</div>

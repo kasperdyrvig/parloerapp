@@ -5,10 +5,8 @@ onPageTitle: Udtaleregler
 parentGroup: pronunciation
 ---
 
-<ul>
-{% for word in site.data.pronunciation.rules.words %}
-  <li>
-      {{ word.greenlandic }}
-  </li>
+<div>
+{% for entry in site.data.pronunciation.rules.words %}
+  {% include parloerentry.html kl=entry.greenlandic da=entry.danish %}
 {% endfor %}
-</ul>
+</div>
