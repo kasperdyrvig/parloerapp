@@ -1,6 +1,6 @@
 ---
 id: color01
-category: color
+phrasesubgroup: color
 greenlandic: qalipaatit
 danish: farver
 audio: colors_01.mp3

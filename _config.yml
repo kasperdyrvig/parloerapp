@@ -1,13 +1,5 @@
-baseurl: "parloerapp"
-url: "https://kasperdyrvig.github.io"
+baseurl: parloerapp
+url: https://kasperdyrvig.github.io
 
 collections:
-  dictionary:
-  grupper:
-    output: true
-  parloer:
-    output: true
-  lektioner:
-    output: true
-  moduler:
-    output: true
+  phrases:

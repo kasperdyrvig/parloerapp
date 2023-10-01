@@ -4,9 +4,10 @@ name: Basale ord
 metaTitle: Basale ord
 onPageTitle: Basale ord
 group: basic
+is-phrasegroup: true
 ---
 
-{% assign ordgruppe = site.parloer | where: 'parentGroup', page.group %}
+{% assign ordgruppe = site.pages | where: 'phrasegroup', page.group %}
 <ul>
 {% for group in ordgruppe %}
 <li>

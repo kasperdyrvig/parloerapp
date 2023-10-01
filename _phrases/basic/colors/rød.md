@@ -1,6 +1,6 @@
 ---
 id: color02
-category: color
+phrasesubgroup: color
 greenlandic: aappalaartoq
 danish: rød
 audio: colors_02.mp3

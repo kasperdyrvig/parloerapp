@@ -2,11 +2,13 @@
 layout: default
 metaTitle: Regler for grønlandsk udtale | Grønlandsk parlør
 onPageTitle: Udtaleregler
-parentGroup: pronunciation
+phrasegroup: pronunciation
+subgroup: rules
 ---
 
 <div>
-{% for entry in site.data.pronunciation.rules.words %}
+{% assign entries = site.phrases | where: 'category', page.subgroup %}
+{% for entry in entries %}
   {% include parloerentry.html kl=entry.greenlandic da=entry.danish %}
 {% endfor %}
 </div>
