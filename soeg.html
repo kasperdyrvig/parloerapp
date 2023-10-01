@@ -1,0 +1,18 @@
+---
+layout: default
+metaTitle: Søgning | Grønlandsk parlør
+---
+
+<input type="search" list="all_phrases">
+
+{% assign entries = site.phrases %}
+<datalist id="all_phrases">
+    {% for entry in entries %}
+    {% if entry.greenlandic %}
+    <option>{{entry.greenlandic}}</option>
+    {% endif %}
+    {% if entry.danish %}
+    <option>{{entry.danish}}</option>
+    {% endif %}
+    {% endfor %}
+</datalist>

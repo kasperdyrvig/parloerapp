@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<h1>{{page.onPageTitle}}</h1>
+
+<div class="phrase-list">
+    {% assign entries = site.phrases | where: 'phrasesubgroup', page.subgroup %}
+    {% for entry in entries %}
+    <div class="phrase-item">
+        {% if entry.picture %}
+        <div class="phrase-picture">
+            <img src="/assets/images/{{entry.phrasesubgroup}}/{{entry.picture}}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="phrase-body">
+            {% if entry.danish %}
+            <p class="phrase-danish">{{entry.danish}}</p>
+            {% endif %}
+            {% if entry.content %}
+            <small class="phrase-note">{{entry.content}}</small>
+            {% endif %}
+            {% if entry.greenlandic %}
+            <p class="phrase-greenlandic" lang="kl">{{entry.greenlandic}}</p>
+            {% endif %}
+        </div>
+        <div class="phrase-tools">
+            {% if entry.audio %}
+            <button type="button" data-playing="false" class="play-button">Sig højt</button>
+            {% endif %}
+            <button type="button" class="copy-button">Kopier</button>
+            <button type="button" class="favorite-button">Føj til samling</button>
+        </div>
+        {% if entry.audio %}
+        <audio src="/assets/audio/{{entry.phrasesubgroup}}/{{entry.audio}}" preload="metadata"></audio>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>

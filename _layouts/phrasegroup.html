@@ -1,11 +1,9 @@
 ---
 layout: default
-metaTitle: Grønlandsk parlør
 ---
-<h1>Parlør-app</h1>
+<h1>{{page.onPageTitle}}</h1>
 
-<h2>Parlør</h2>
-{% assign phrasegroups = site.pages | where: 'is-phrasegroup', true %}
+{% assign phrasegroups = site.pages | where: 'phrasegroup', page.group %}
 <ul>
     {% for phrasegroup in phrasegroups %}
     <li>

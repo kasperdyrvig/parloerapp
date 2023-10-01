@@ -6,4 +6,4 @@ danish: farver
 audio: colors_01.mp3
 picture: colors.jpg
 ---
-Her kan du skrive en note
+Her kan **du** skrive en note
