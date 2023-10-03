@@ -1,6 +1,7 @@
 ---
 layout: default
 metaTitle: Dobbeltvokaler | Ekstramateriale til lektion 1 | Grønlandsk parlør
+onPageTitle: Dobbeltvokaler
 ---
 
 # Dobbeltvokaler

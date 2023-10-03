@@ -9,7 +9,8 @@ layout: default
     <div class="phrase-item">
         {% if entry.picture %}
         <div class="phrase-picture">
-            <img src="/assets/images/{{entry.phrasesubgroup}}/{{entry.picture}}" loading="lazy">
+            {% capture picture_path %}/assets/images/{{entry.phrasesubgroup}}/{{entry.picture}}{% endcapture %}
+            <img src="{{picture_path | relative_url}}" alt="" loading="lazy">
         </div>
         {% endif %}
         <div class="phrase-body">
@@ -27,11 +28,14 @@ layout: default
             {% if entry.audio %}
             <button type="button" data-playing="false" class="play-button">Sig højt</button>
             {% endif %}
+            {% if entry.greenlandic %}
             <button type="button" class="copy-button">Kopier</button>
-            <button type="button" class="favorite-button">Føj til samling</button>
+            {% endif %}
+            <button type="button" class="favorite-button" disabled>Føj til samling</button>
         </div>
         {% if entry.audio %}
-        <audio src="/assets/audio/{{entry.phrasesubgroup}}/{{entry.audio}}" preload="metadata"></audio>
+        {% capture audio_path %}/assets/audio/{{entry.phrasesubgroup}}/{{entry.audio}}{% endcapture %}
+        <audio src="{{audio_path | relative_url}}" preload="metadata"></audio>
         {% endif %}
     </div>
     {% endfor %}

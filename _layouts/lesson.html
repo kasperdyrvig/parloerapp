@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<h1>{{page.onPageTitle}}</h1>
+
+<ul>
+    <li>Til kursisten</li>
+    <li>Til læreren</li>
+</ul>
+
+<div class="student">
+    <div>{{page.content | markdownify}}</div>
+
+    <div>[øvelser]</div>
+
+    <div>[guldkorn]</div>
+
+    <!-- {% assign studypane = site.pages | where: "part", "study" | first %}
+    <details>
+        <summary>{{studypane.onPageTitle}}</summary>
+        {{studypane.content | markdownify}}
+    </details> -->
+
+    <fieldset>
+        <label for="lesson-date">Lektion gennemført</label>
+        <input type="date" id="lesson-date">
+    </fieldset>
+</div>
+
+<div class="teacher">
+    <!-- {% assign teacherpane = site.pages | where: "part", "teacher" | first %}
+    {{teacherpane.content | markdownify}} -->
+
+    {% capture teacherpane %}{% include_relative _noter.md %}{% endcapture %}
+    {{ teacherpane | markdownify }}
+    
+</div>
+
+<div>
+    <a href="#">Forrige</a>
+    <a href="#">Næste</a>
+</div>

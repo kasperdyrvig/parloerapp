@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: course
 metaTitle: Sprogkurset Paasiviuk?! | Grønlandsk parlør
+onPageTitle: Sprogkursus
 ---
 
 # Tikilluarit!
