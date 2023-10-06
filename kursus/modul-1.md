@@ -1,13 +1,7 @@
 ---
-layout: course
-is_module: true
+layout: module
 metaTitle: Modul 1 | Paasiviuk | Grønlandsk parlør
 onPageTitle: Modul 1
 onPageDescription: Lektion 1-8
+module: 1
 ---
-
-# Modul 1
-
-## Introduktion
-
-## Lektioner

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h1>{{page.onPageTitle}}</h1>
+
+{% assign lessons = site.pages | where: 'partOfModule', page.module %}
+<ul>
+    {% for lesson in lessons %}
+    <li>
+        <a href="{{lesson.url | relative_url}}">{{ lesson.onPageTitle }}</a>
+    </li>
+    {% endfor %}
+</ul>

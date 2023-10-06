@@ -10,17 +10,18 @@ layout: default
 </ul>
 
 <div class="student">
-    <div>{{page.content | markdownify}}</div>
+    {% assign lessoninto = site.paasiviuk_introductions | where: 'lesson', page.lesson | first %}
+    <div>{{lessoninto.content}}</div>
 
     <div>[øvelser]</div>
 
     <div>[guldkorn]</div>
 
-    <!-- {% assign studypane = site.pages | where: "part", "study" | first %}
+    {% assign studynotes = site.paasiviuk_studynotes | where: 'lesson', page.lesson | first %}
     <details>
-        <summary>{{studypane.onPageTitle}}</summary>
-        {{studypane.content | markdownify}}
-    </details> -->
+        <summary>Selvstudie</summary>
+        {{studynotes.content}}
+    </details>
 
     <fieldset>
         <label for="lesson-date">Lektion gennemført</label>
@@ -28,13 +29,9 @@ layout: default
     </fieldset>
 </div>
 
+{% assign teachernotes = site.paasiviuk_teachernotes | where: 'lesson', page.lesson | first %}
 <div class="teacher">
-    <!-- {% assign teacherpane = site.pages | where: "part", "teacher" | first %}
-    {{teacherpane.content | markdownify}} -->
-
-    {% capture teacherpane %}{% include_relative _noter.md %}{% endcapture %}
-    {{ teacherpane | markdownify }}
-    
+    {{teachernotes.content}}
 </div>
 
 <div>

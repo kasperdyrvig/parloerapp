@@ -1,0 +1,7 @@
+{% if include.src %}
+{% capture audio_src %}/assets/audio/{{include.src}}{% endcapture %}
+<div>
+<button type="button" data-playing="false" class="play-button">Sig højt</button>
+</div>
+<audio src="{{audio_src | relative_url}}" preload="metadata"></audio>
+{% endif %}

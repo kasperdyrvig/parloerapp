@@ -1,0 +1,4 @@
+{% if include.src %}
+{% capture picture_src%}/assets/images/{{include.src}}{% endcapture %}
+<img src="{{picture_src | relative_url}}" alt=""/>
+{% endif %}

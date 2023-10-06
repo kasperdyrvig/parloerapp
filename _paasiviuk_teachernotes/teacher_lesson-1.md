@@ -1,3 +1,6 @@
+---
+lesson: 1
+---
 **Formål:** Afstemme mål og forventninger, lære kursisterne at kende, samt lære udtale af A, I og U.
 
 **Plan:**

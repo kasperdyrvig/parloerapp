@@ -1,7 +1,5 @@
 ---
 lesson: 1
-part: study
-onPageTitle: Materiale til selvstudie
 ---
 **Udtale af vokaler:**
 

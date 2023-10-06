@@ -1,9 +1,4 @@
 ---
-layout: lesson
-is_lesson: true
-metaTitle: Lektion 1 | Modul 1 | Sprogkursus | Grønlandsk parlør
-onPageTitle: Lektion 1
-onPageDescription: Starten på kurset
 lesson: 1
 ---
 Velkommen til den første lektion i Paasiviuk?! Jeg håber at du vil få gavn af kurset!

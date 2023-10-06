@@ -1,0 +1,9 @@
+<fieldset class="form-group radio">
+    <legend>{{include.label}}</legend>
+    <div class="multiple-choise-container">
+    {% for option in include.options%}
+        <label class="multiple-choise-option radio"><input type="radio" required value="a" name="{{include.id}}">{{option}}</label>
+    {% endfor %}
+    </div>
+    <input type="hidden" value="{{include.validation | lowercse}}">
+</fieldset>

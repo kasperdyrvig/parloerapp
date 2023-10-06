@@ -1,3 +1,13 @@
 ---
 layout: default
 ---
+<h1>{{page.onPageTitle}}</h1>
+
+{% assign modules = site.pages | where: 'layout', 'module' %}
+<ul>
+    {% for module in modules %}
+    <li>
+        <a href="{{module.url | relative_url}}">{{ module.onPageTitle }}</a>
+    </li>
+    {% endfor %}
+</ul>
