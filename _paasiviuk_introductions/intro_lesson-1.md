@@ -8,3 +8,5 @@ Formålet med denne lektion er at afstemme mål og forventninger, finde ud af hv
 Bestem dig på forhånd for et realistisk mål du gerne vil gennemføre inden modul 1 er ovre - det behøver ikke at have direkte relation til kurset. Se dette link for gode råd til at lære et nyt sprog: 7 tips til, hvordan du lærer et nyt sprog og denne side: Tips til at lære grønlandsk
 
 Gennemse Regler for udtale af A, I og U som forberedelse til lektionen.
+
+Her er min ændring :)
