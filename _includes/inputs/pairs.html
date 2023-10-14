@@ -1,0 +1,14 @@
+{% assign a1 = include.array1 | split: ", " %}
+{% assign a2 = include.array2 | split: ", " %}
+<div class="pairs">
+    <div class="colOne">
+        {% for item in a1 %}
+            <div class="pairitem" data-pair="{{forloop.index}}">{{item}}</div>
+        {% endfor %}
+    </div>
+    <div class="colTwo">
+        {% for item in a2 %}
+            <div class="pairitem" data-pair="{{forloop.index}}">{{item}}</div>
+        {% endfor %}
+    </div>
+</div>

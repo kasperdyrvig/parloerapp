@@ -1,4 +1,4 @@
-<fieldset class="form-group radio">
+<fieldset class="form-group checkbox">
     <legend>{{include.label}}</legend>
     {%- if include.validation %}
     <input type="hidden" value="{{include.validation | lowercse}}">
@@ -7,7 +7,7 @@
     <div class="multiple-choise-container" data-random="{{include.randomize | lowercse}}">
     {%- assign options = include.options | split: ", " -%}
     {%- for option in options %}
-        <label class="multiple-choise-option radio"><input type="radio" required value="{{forloop.index}}" name="{{include.id}}">{{option}}</label>
+        <label class="multiple-choise-option checkbox"><input type="checkbox" value="{{forloop.index}}" name="{{include.id}}">{{option}}</label>
     {%- endfor %}
     </div>
 </fieldset>

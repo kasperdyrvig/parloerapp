@@ -1,0 +1,18 @@
+<div class="multiinput">
+    {% assign labels = include.labels | split: ", " %}
+    {% assign validations = include.validations | split: ", " %}
+    {%- for label in labels %}
+    <div class="form-group textinput">
+        {% if include.radio %}
+        <input type="radio" name="{{include.id}}">
+        {% endif %}
+        <label for="{{forloop.index}}">{{label}}</label>
+        <input id="{{forloop.index}}" type="text" class="form-input" autocomplete="off" spellcheck="off" required>
+        {% assign vi = forloop.index | minus: 1%}
+        {% if validations[vi] %}
+            <input type="hidden" value="{{validations[vi]}}">
+            <label for="{{forloop.index}}" class="response-label" hidden></label>
+        {% endif %}
+    </div>
+    {%- endfor %}
+</div>

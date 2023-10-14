@@ -6,8 +6,37 @@ layout: default
     <p>{{page.onPageDescription}}</p>
 </div>
 <div class="exercise-items">
+    <progress class="gamepanel-meter" id="gameprogress" title="Fremgang"></progress>
 {{content}}
+
+<button type="submit">Tjek svaret</button>
+
+<div class="response fail" id="wrong">
+    <p class="response-title">😕 Forkert!</p>
+    <p class="response-text"></p>
+    <div class="response-footer">
+        <button type="button" class="btn btn-block btn-uppercase btn-red" onclick="nextExerciseItem()">Næste</button>
+    </div>
+</div>
+
+<div class="response almost" id="almost">
+    <p class="response-title">Dit svar er registreret</p>
+    <p class="response-text"></p>
+    <div class="response-footer">
+        <button type="button" class="btn btn-block btn-uppercase btn-yellow" onclick="nextExerciseItem()">Næste</button>
+    </div>
+</div>
+
+<div class="response success" id="right">
+    <p class="response-title">😀 Rigtigt!</p>
+    <p class="response-text"></p>
+    <div class="response-footer">
+        <button type="button" class="btn btn-block btn-uppercase btn-green" onclick="nextExerciseItem()">Næste</button>
+    </div>
+</div>
 </div>
 <div class="exercise-finish">
 
 </div>
+
+<output id="resultContainer" hidden></output>
